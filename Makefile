@@ -2,9 +2,10 @@
 MODULE = $(notdir $(CURDIR))
 
 all: ./$(MODULE)
+	./$<
 	
 ./$(MODULE): $(MODULE).c
-	$(CC) -o $@ $^
+	$(CC) -g2 -Og -o $@ $^
 	
 $(MODULE).c: $(MODULE).rl
-	ragel $<
+	ragel -G2 -o $@ $<
