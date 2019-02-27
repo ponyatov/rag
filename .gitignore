@@ -1,5 +1,7 @@
 *~
 *.swp
 
-rag.c
+*.dot
+*.c
+
 rag
